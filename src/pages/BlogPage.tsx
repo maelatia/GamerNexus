@@ -171,15 +171,38 @@ export default function BlogPage() {
               className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
-          {/* Rest of the blog post content */}
+          <div className="px-4">
+            <h1 className="text-4xl font-bold text-white mb-4">{post.title}</h1>
+            <div className="flex items-center gap-4 text-gray-400 mb-8">
+              <div className="flex items-center gap-2">
+                <img
+                  src={post.author.avatar}
+                  alt={post.author.name}
+                  className="w-6 h-6 rounded-full"
+                />
+                <span>{post.author.name}</span>
+              </div>
+              <span>{post.date}</span>
+              <span>{post.readTime}</span>
+            </div>
+            <p className="text-gray-300 text-lg leading-relaxed">{post.excerpt}</p>
+          </div>
         </article>
       </BlogLayout>
     );
   }
   
   // Otherwise show blog listing
+  const content = pageContent.default;
+  
   return (
-    <BlogLayout>
+    <BlogLayout
+      title={content.title}
+      description={content.description}
+      icon={content.icon}
+      color={content.color}
+      posts={blogPosts}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {blogPosts.map(post => (
@@ -191,7 +214,21 @@ export default function BlogPage() {
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
-              {/* Rest of the blog card content */}
+              <div className="p-6">
+                <h2 className="text-xl font-bold text-white mb-2">{post.title}</h2>
+                <p className="text-gray-400 mb-4">{post.excerpt}</p>
+                <div className="flex items-center justify-between text-sm text-gray-500">
+                  <div className="flex items-center gap-2">
+                    <img
+                      src={post.author.avatar}
+                      alt={post.author.name}
+                      className="w-6 h-6 rounded-full"
+                    />
+                    <span>{post.author.name}</span>
+                  </div>
+                  <span>{post.date}</span>
+                </div>
+              </div>
             </div>
           ))}
         </div>

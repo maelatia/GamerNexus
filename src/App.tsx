@@ -23,6 +23,8 @@ import IndustryInsights from './pages/blogs/IndustryInsights';
 import GameReleases from './pages/blogs/GameReleases';
 import TechReview from './pages/blogs/TechReview';
 import CryptoNews from './pages/blogs/CryptoNews';
+import EsportsNews from './pages/blogs/EsportsNews';
+import TechNews from './pages/blogs/TechNews';
 
 function App() {
   return (
@@ -48,20 +50,11 @@ function App() {
             <Route path="/blog/:blogId" element={<BlogPage />} />
             <Route path="/blogs" element={<BlogPage />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-            
-            {/* Blog Routes */}
             <Route path="/blogs/gaming-news" element={<GamingNews />} />
-            <Route path="/blogs/game-reviews" element={<GameReviews />} />
-            <Route path="/blogs/esports" element={<Esports />} />
-            <Route path="/blogs/gaming-tips" element={<GamingTips />} />
-            <Route path="/blogs/tech-guides" element={<TechGuides />} />
-            <Route path="/blogs/modding" element={<ModdingCustomization />} />
-            <Route path="/blogs/culture" element={<GamingCulture />} />
-            <Route path="/blogs/industry" element={<IndustryInsights />} />
-            <Route path="/blogs/releases" element={<GameReleases />} />
-            <Route path="/blogs/tech-review" element={<TechReview />} />
-            <Route path="/blogs/crypto" element={<CryptoNews />} />
+            <Route path="/blogs/esports-news" element={<EsportsNews />} />
+            <Route path="/blogs/tech-news" element={<TechNews />} />
+            <Route path="/blogs/crypto-news" element={<CryptoNews />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Layout>
       </Router>

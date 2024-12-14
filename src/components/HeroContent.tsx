@@ -7,16 +7,16 @@ export default function HeroContent() {
   return (
     <div className="h-full flex flex-col justify-center translate-y-8">
       <div className="flex-grow flex flex-col justify-center">
-        <h1 className="text-9xl tracking-tight font-extrabold text-white sm:text-6xl md:text-9xl">
-          <div className="flex items-center mb-4">
-            <span className="text-8xl md:text-[7.5rem] font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent whitespace-nowrap">
+        <h1 className="text-9xl tracking-tight font-extrabold text-white sm:text-7xl md:text-9xl">
+          <div className="flex items-center mb-6">
+            <span className="text-10xl md:text-[8rem] font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent whitespace-nowrap">
               Gamer Nexus
             </span>
           </div>
           <span className="block text-7xl md:text-[5rem]">Level Up Your</span>
           <span className="block text-7xl md:text-[5rem] text-purple-500">Gaming World</span>
         </h1>
-        <p className="mt-4 text-lg text-gray-300 sm:mt-5 sm:text-xl sm:max-w-xl md:mt-5 md:text-2xl">
+        <p className="mt-6 text-lg text-gray-300 sm:mt-5 sm:text-xl sm:max-w-xl md:mt- md:text-2xl">
           Your Ultimate Hub for Gaming Insights & Resources. Discover the best gaming gear, connect with fellow gamers, and stay updated with the latest trends.
         </p>
       </div>

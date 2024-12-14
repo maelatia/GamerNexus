@@ -71,35 +71,31 @@ const categories: CategoryCard[] = [
 
 export default function CategoryGrid() {
   return (
-    <div className="max-w-[1800px] mx-auto px-6 sm:px-8 lg:px-8 py-12">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-white mb-4">Explore Categories</h2>
-        <p className="text-gray-400">Discover all our gaming categories and find what interests you</p>
-      </div>
-      
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        {categories.map((category, index) => (
-          <Link
-            key={index}
-            to={category.link}
-            className={`group block p-6 rounded-xl ${category.color} transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl`}
-          >
-            <div className="flex items-center space-x-4">
-              <div className="p-3 rounded-lg">
-                {category.icon}
+    <section className="py-16">
+      <div className="max-w-[1700px] mx-auto px-6 sm:px-8 lg:px-10">
+        <h2 className="text-4xl font-bold text-center text-white mb-12">Explore Categories</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {categories.map((category, index) => (
+            <Link 
+              key={index} 
+              to={category.link}
+              className="block group"
+            >
+              <div className={`${category.color} p-8 rounded-xl backdrop-blur-sm transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-lg border border-gray-800/50 group-hover:border-gray-700/50`}>
+                <div className="flex items-start gap-4">
+                  <div className="bg-gray-900/50 rounded-lg p-3">
+                    {category.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-1">{category.title}</h3>
+                    <p className="text-gray-300">{category.description}</p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-white/90">
-                  {category.title}
-                </h3>
-                <p className="text-gray-400 group-hover:text-gray-300">
-                  {category.description}
-                </p>
-              </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

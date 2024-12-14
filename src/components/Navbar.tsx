@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NavActions from './NavActions';
-import { Monitor, Heart, Users2, Mail, Key, Video, Code, Newspaper, Gamepad, Cpu, Bitcoin } from 'lucide-react';
+import { Monitor, Heart, Users2, Mail, Key, Video, Code, Newspaper, Gamepad, Cpu, Bitcoin, Trophy, Gamepad2 } from 'lucide-react';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,7 +13,7 @@ import {
 export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur border-b border-gray-800">
-      <div className="max-w-[1800px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1700px] mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
             {/* Logo */}
@@ -107,23 +107,23 @@ export default function Navbar() {
                         <div className="flex flex-col gap-1">
                           <Link to="/blogs/gaming-news" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
                             <div className="flex items-center gap-3">
-                              <Newspaper className="w-5 h-5 text-blue-400" />
+                              <Gamepad2 className="w-5 h-5 text-green-400" />
                               <span className="text-sm font-medium text-white group-hover:text-purple-400">Gaming News</span>
                             </div>
                           </Link>
-                          <Link to="/blogs/releases" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
+                          <Link to="/blogs/esports-news" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
                             <div className="flex items-center gap-3">
-                              <Gamepad className="w-5 h-5 text-green-400" />
-                              <span className="text-sm font-medium text-white group-hover:text-purple-400">Game Releases</span>
+                              <Trophy className="w-5 h-5 text-yellow-400" />
+                              <span className="text-sm font-medium text-white group-hover:text-purple-400">Esports News</span>
                             </div>
                           </Link>
-                          <Link to="/blogs/tech-review" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
+                          <Link to="/blogs/tech-news" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
                             <div className="flex items-center gap-3">
-                              <Cpu className="w-5 h-5 text-purple-400" />
-                              <span className="text-sm font-medium text-white group-hover:text-purple-400">Tech Review</span>
+                              <Cpu className="w-5 h-5 text-blue-400" />
+                              <span className="text-sm font-medium text-white group-hover:text-purple-400">Tech News & Reviews</span>
                             </div>
                           </Link>
-                          <Link to="/blogs/crypto" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
+                          <Link to="/blogs/crypto-news" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
                             <div className="flex items-center gap-3">
                               <Bitcoin className="w-5 h-5 text-yellow-400" />
                               <span className="text-sm font-medium text-white group-hover:text-purple-400">Blockchain & Crypto</span>

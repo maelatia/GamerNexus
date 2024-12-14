@@ -25,7 +25,7 @@ interface BlogCardProps {
 export default function BlogCard({ post }: BlogCardProps) {
   return (
     <Link to={`/blog/post/${post.slug}`} className="block">
-      <div className="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-[1.02] transition-all duration-300 flex flex-col h-[500px]">
+      <div className="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-[1.1] transition-all duration-300 flex flex-col h-[500px]">
         <div className="relative h-64">
           <img
             src={post.coverImage}

@@ -9,7 +9,7 @@ export default function GameFeatures() {
 
   return (
     <div className="bg-gray-900 py-16">
-      <div className="max-w-[1800px] mx-auto px-6 sm:px-8 lg:px-10">
+      <div className="max-w-[1700px] mx-auto px-6 sm:px-8 lg:px-10">
         <h2 className="text-4xl font-bold text-center text-white mb-12">Stay on the Game</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Link 
@@ -17,7 +17,7 @@ export default function GameFeatures() {
             className="block transition-transform hover:scale-105"
             onClick={handleClick}
           >
-            <div className="bg-gray-800/50 p-8 rounded-lg backdrop-blur-sm h-full">
+            <div className="bg-gray-800/50 p-8 rounded-lg backdrop-blur-sm h-full border border-gray-800/50 hover:border-gray-700/50">
               <div className="flex items-center justify-center w-12 h-12 mb-4">
                 <Newspaper className="w-8 h-8 text-gray-300" />
               </div>
@@ -31,7 +31,7 @@ export default function GameFeatures() {
             className="block transition-transform hover:scale-105"
             onClick={handleClick}
           >
-            <div className="bg-gray-800/50 p-8 rounded-lg backdrop-blur-sm h-full">
+            <div className="bg-gray-800/50 p-8 rounded-lg backdrop-blur-sm h-full border border-gray-800/50 hover:border-gray-700/50">
               <div className="flex items-center justify-center w-12 h-12 mb-4">
                 <Star className="w-8 h-8 text-yellow-400" />
               </div>
@@ -45,12 +45,12 @@ export default function GameFeatures() {
             className="block transition-transform hover:scale-105"
             onClick={handleClick}
           >
-            <div className="bg-gray-800/50 p-8 rounded-lg backdrop-blur-sm h-full">
+            <div className="bg-gray-800/50 p-8 rounded-lg backdrop-blur-sm h-full border border-gray-800/50 hover:border-gray-700/50">
               <div className="flex items-center justify-center w-12 h-12 mb-4">
                 <BookOpen className="w-8 h-8 text-blue-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Gaming Guides</h3>
-              <p className="text-gray-300">Improve your skills with our detailed guides</p>
+              <p className="text-gray-300">Learn tips and tricks from experienced players</p>
             </div>
           </Link>
         </div>
