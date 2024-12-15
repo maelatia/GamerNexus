@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import CategoryDropdown from './CategoryDropdown';
 import BlogDropdown from './BlogDropdown';
+import PodcastDropdown from './PodcastDropdown';
 
 export default function NavLinks() {
   const location = useLocation();
@@ -26,6 +27,7 @@ export default function NavLinks() {
         </Link>
         <CategoryDropdown />
         <BlogDropdown />
+        <PodcastDropdown />
         <Link to="/about" className={linkClass('/about')}>
           About
         </Link>

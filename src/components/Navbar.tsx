@@ -18,7 +18,7 @@ export default function Navbar() {
           <div className="flex items-center">
             {/* Logo */}
             <Link to="/" className="flex items-center">
-              <span className="text-4xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+              <span className="text-3xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
                 GamerNexus
               </span>
             </Link>
@@ -35,11 +35,11 @@ export default function Navbar() {
               <NavigationMenu>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-3xl text-white hover:text-purple-400 transition-colors bg-transparent">
+                    <NavigationMenuTrigger className="text-2xl text-white hover:text-purple-400 transition-colors bg-transparent">
                       Categories
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <div className="w-[200px] p-2 bg-gray-900 border border-gray-800 rounded-lg shadow-xl">
+                      <div className="w-[250px] p-2 bg-gray-900 border border-gray-800 rounded-lg shadow-xl">
                         <div className="flex flex-col gap-1">
                           <Link to="/category/gaming-pcs" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
                             <div className="flex items-center gap-3">
@@ -99,11 +99,11 @@ export default function Navbar() {
               <NavigationMenu>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-3xl text-white hover:text-purple-400 transition-colors bg-transparent">
-                      Blog
+                    <NavigationMenuTrigger className="text-2xl text-white hover:text-purple-400 transition-colors bg-transparent">
+                      News
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <div className="w-[180px] p-2 bg-gray-900 border border-gray-800 rounded-lg shadow-xl">
+                      <div className="w-[250px] p-2 bg-gray-900 border border-gray-800 rounded-lg shadow-xl">
                         <div className="flex flex-col gap-1">
                           <Link to="/blogs/gaming-news" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
                             <div className="flex items-center gap-3">
@@ -126,6 +126,46 @@ export default function Navbar() {
                           <Link to="/blogs/crypto-news" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
                             <div className="flex items-center gap-3">
                               <Bitcoin className="w-5 h-5 text-yellow-400" />
+                              <span className="text-sm font-medium text-white group-hover:text-purple-400">Blockchain & Crypto News</span>
+                            </div>
+                          </Link>
+                        </div>
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="text-2xl text-white hover:text-purple-400 transition-colors bg-transparent">
+                      Podcasts
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <div className="w-[250px] p-2 bg-gray-900 border border-gray-800 rounded-lg shadow-xl">
+                        <div className="flex flex-col gap-1">
+                          <Link to="/podcasts/gaming" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
+                            <div className="flex items-center gap-3">
+                              <Gamepad2 className="w-5 h-5 text-green-400" />
+                              <span className="text-sm font-medium text-white group-hover:text-purple-400">TOP Gaming Streams & Podcasts</span>
+                            </div>
+                          </Link>
+                          <Link to="/blogs/esports-news" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
+                            <div className="flex items-center gap-3">
+                              <Trophy className="w-5 h-5 text-yellow-400" />
+                              <span className="text-sm font-medium text-white group-hover:text-purple-400">Best Live Streams</span>
+                            </div>
+                          </Link>
+                          <Link to="/podcasts/tech" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
+                            <div className="flex items-center gap-3">
+                              <Cpu className="w-5 h-5 text-blue-400" />
+                              <span className="text-sm font-medium text-white group-hover:text-purple-400">Best Tech Talk</span>
+                            </div>
+                          </Link>
+                          <Link to="/podcasts/crypto" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
+                            <div className="flex items-center gap-3">
+                              <Bitcoin className="w-5 h-5 text-yellow-400" />
                               <span className="text-sm font-medium text-white group-hover:text-purple-400">Blockchain & Crypto</span>
                             </div>
                           </Link>
@@ -138,7 +178,7 @@ export default function Navbar() {
 
               <Link 
                 to="/about" 
-                className="text-3xl text-white hover:text-purple-400 transition-colors"
+                className="text-2xl text-white hover:text-purple-400 transition-colors"
               >
                 About
               </Link>

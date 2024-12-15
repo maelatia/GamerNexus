@@ -39,14 +39,14 @@ export default function NavActions() {
       {!user && (
         <button
           onClick={() => navigate('/signin')}
-          className="px-4 py-2 text-3xl font-medium text-white hover:text-purple-400 transition-colors"
+          className="px-4 py-2 text-2xl font-medium text-white hover:text-purple-400 transition-colors"
         >
           Sign In
         </button>
       )}
       <button 
         onClick={() => navigate('/subscribe')}
-        className="ml-4 px-6 py-3 text-3xl font-medium rounded-lg text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+        className="ml-4 px-6 py-3 text-2xl font-medium rounded-lg text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
       >
         Subscribe
       </button>

@@ -25,6 +25,9 @@ import TechReview from './pages/blogs/TechReview';
 import CryptoNews from './pages/blogs/CryptoNews';
 import EsportsNews from './pages/blogs/EsportsNews';
 import TechNews from './pages/blogs/TechNews';
+import TopGamingPodcasts from './pages/TopGamingPodcasts';
+import TopCryptoPodcasts from './pages/TopCryptoPodcasts';
+import TopTechPodcasts from './pages/TopTechPodcasts';
 
 function App() {
   return (
@@ -54,6 +57,9 @@ function App() {
             <Route path="/blogs/esports-news" element={<EsportsNews />} />
             <Route path="/blogs/tech-news" element={<TechNews />} />
             <Route path="/blogs/crypto-news" element={<CryptoNews />} />
+            <Route path="/podcasts/gaming" element={<TopGamingPodcasts />} />
+            <Route path="/podcasts/crypto" element={<TopCryptoPodcasts />} />
+            <Route path="/podcasts/tech" element={<TopTechPodcasts />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Layout>

@@ -64,12 +64,12 @@ const RSSFeedGrid: React.FC<RSSFeedGridProps> = ({ feedType, categoryTags }) => 
                      itemTitle.includes('altcoin') || itemDescription.includes('altcoin');
             case 'memecoin':
               return itemCategories.some(c => c.includes('meme') || c.includes('doge') || c.includes('shiba')) ||
-                     itemTitle.includes('doge') || itemTitle.includes('shiba') || 
-                     itemDescription.includes('meme coin');
+                     itemTitle.includes('doge') || itemTitle.includes('shiba') || itemTitle.includes('memecoins') || 
+                     itemDescription.includes('memecoin');
             case 'market':
-              return itemCategories.some(c => c.includes('market') || c.includes('analysis') || c.includes('trading')) ||
-                     itemTitle.includes('market') || itemTitle.includes('analysis') || 
-                     itemDescription.includes('market analysis');
+              return itemCategories.some(c => c.includes('crypto market') || c.includes('crypto analysis') || c.includes('crypto trading')) ||
+                     itemTitle.includes('crypto market') || itemTitle.includes('crypto analysis') || 
+                     itemDescription.includes('crypto market') || itemDescription.includes('crypto analysis');
             case 'review':
               return itemCategories.some(c => c.includes('review')) ||
                      itemTitle.includes('review') || 

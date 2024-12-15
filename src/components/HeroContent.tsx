@@ -13,10 +13,10 @@ export default function HeroContent() {
               Gamer Nexus
             </span>
           </div>
-          <span className="block text-7xl md:text-[5rem]">Level Up Your</span>
-          <span className="block text-7xl md:text-[5rem] text-purple-500">Gaming World</span>
+          <span className="block text-6xl md:text-[5rem] whitespace-nowrap mb-4">Level Up Your Gaming</span>
+          <span className="block text-6xl md:text-[5rem] whitespace-nowrap text-purple-500">And Streaming World</span>
         </h1>
-        <p className="mt-6 text-lg text-gray-300 sm:mt-5 sm:text-xl sm:max-w-xl md:mt- md:text-2xl">
+        <p className="mt-6 text-lg text-gray-300 sm:mt-6 sm:text-xl sm:max-w-xl md:mt-6 md:text-2xl">
           Your Ultimate Hub for Gaming Insights & Resources. Discover the best gaming gear, connect with fellow gamers, and stay updated with the latest trends.
         </p>
       </div>
