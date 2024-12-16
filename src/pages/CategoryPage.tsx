@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
+import DatingAppCard from '../components/DatingAppCard';
+import { useDatingApps } from '../services/datingAppsService';
 
 const categoryData = {
   'gaming-pcs': {
@@ -529,6 +531,7 @@ const categoryData = {
 export default function CategoryPage() {
   const { categoryId } = useParams<{ categoryId: string }>();
   const [activeFilter, setActiveFilter] = useState('all');
+  const { apps, loading: appsLoading } = useDatingApps();
   
   const categoryInfo = categoryId ? categoryData[categoryId as keyof typeof categoryData] : null;
 
@@ -548,6 +551,26 @@ export default function CategoryPage() {
         return true;
     }
   });
+
+  if (categoryId === 'dating') {
+    return (
+      <div className="container mx-auto px-4">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+            Dating & Social Apps for Gamers
+          </h1>
+          <p className="text-gray-600 dark:text-gray-400">
+            Find your player two or make new gaming friends
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {apps.map((app, index) => (
+            <DatingAppCard key={index} app={app} />
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-900 pt-8 pb-16">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import NavActions from './NavActions';
 import { Monitor, Heart, Users2, Mail, Key, Video, Code, Newspaper, Gamepad, Cpu, Bitcoin, Trophy, Gamepad2 } from 'lucide-react';
 import {
@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/navigation-menu";
 
 export default function Navbar() {
+  const location = useLocation();
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur border-b border-gray-800">
       <div className="max-w-[1700px] mx-auto px-4 sm:px-6">
@@ -18,7 +20,7 @@ export default function Navbar() {
           <div className="flex items-center">
             {/* Logo */}
             <Link to="/" className="flex items-center">
-              <span className="text-3xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text nav-title">
                 GamerNexus
               </span>
             </Link>
@@ -44,19 +46,19 @@ export default function Navbar() {
                           <Link to="/category/gaming-pcs" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
                             <div className="flex items-center gap-3">
                               <Monitor className="w-5 h-5 text-blue-400" />
-                              <span className="text-sm font-medium text-white group-hover:text-purple-400">Gaming PCs</span>
+                              <span className="text-sm font-medium text-white group-hover:text-purple-400">TOP Gaming PCs</span>
                             </div>
                           </Link>
-                          <Link to="/category/dating" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
+                          <Link to="/dating-apps" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
                             <div className="flex items-center gap-3">
                               <Heart className="w-5 h-5 text-pink-400" />
-                              <span className="text-sm font-medium text-white group-hover:text-purple-400">Dating Apps</span>
+                              <span className="text-sm font-medium text-white group-hover:text-purple-400">Best Dating & Meet Friends Apps</span>
                             </div>
                           </Link>
-                          <Link to="/category/meet-friends" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
+                          <Link to="top-games" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
                             <div className="flex items-center gap-3">
                               <Users2 className="w-5 h-5 text-green-400" />
-                              <span className="text-sm font-medium text-white group-hover:text-purple-400">Meet Friends</span>
+                              <span className="text-sm font-medium text-white group-hover:text-purple-400">Most Played Games Worldwide</span>
                             </div>
                           </Link>
                           <Link to="/category/essentials" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
@@ -79,14 +81,14 @@ export default function Navbar() {
                           </Link>
                           <Link to="/category/crypto" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
                             <div className="flex items-center gap-3">
-                              <Key className="w-5 h-5 text-orange-400" />
+                              <Bitcoin className="w-5 h-5 text-orange-400" />
                               <span className="text-sm font-medium text-white group-hover:text-purple-400">Crypto & NFT</span>
                             </div>
                           </Link>
                           <Link to="/category/game-dev" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
                             <div className="flex items-center gap-3">
                               <Code className="w-5 h-5 text-indigo-400" />
-                              <span className="text-sm font-medium text-white group-hover:text-purple-400">Game Development</span>
+                              <span className="text-sm font-medium text-white group-hover:text-purple-400">AI GAMER Portrait App</span>
                             </div>
                           </Link>
                         </div>
@@ -109,6 +111,12 @@ export default function Navbar() {
                             <div className="flex items-center gap-3">
                               <Gamepad2 className="w-5 h-5 text-green-400" />
                               <span className="text-sm font-medium text-white group-hover:text-purple-400">Gaming News</span>
+                            </div>
+                          </Link>
+                          <Link to="/blogs/streaming-news" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
+                            <div className="flex items-center gap-3">
+                              <Trophy className="w-5 h-5 text-yellow-400" />
+                              <span className="text-sm font-medium text-white group-hover:text-purple-400">Best Live Streams</span>
                             </div>
                           </Link>
                           <Link to="/blogs/esports-news" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
@@ -151,12 +159,6 @@ export default function Navbar() {
                               <span className="text-sm font-medium text-white group-hover:text-purple-400">TOP Gaming Streams & Podcasts</span>
                             </div>
                           </Link>
-                          <Link to="/blogs/esports-news" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
-                            <div className="flex items-center gap-3">
-                              <Trophy className="w-5 h-5 text-yellow-400" />
-                              <span className="text-sm font-medium text-white group-hover:text-purple-400">Best Live Streams</span>
-                            </div>
-                          </Link>
                           <Link to="/podcasts/tech" className="group p-3 hover:bg-gray-800 rounded-lg transition-colors">
                             <div className="flex items-center gap-3">
                               <Cpu className="w-5 h-5 text-blue-400" />
@@ -181,6 +183,17 @@ export default function Navbar() {
                 className="text-2xl text-white hover:text-purple-400 transition-colors"
               >
                 About
+              </Link>
+
+              <Link
+                to="/top-games"
+                className={`text-lg font-semibold ${
+                  location.pathname === '/top-games'
+                    ? 'text-white'
+                    : 'text-gray-300 hover:text-white'
+                }`}
+              >
+                Most Played Games
               </Link>
             </div>
           </div>

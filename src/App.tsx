@@ -28,6 +28,8 @@ import TechNews from './pages/blogs/TechNews';
 import TopGamingPodcasts from './pages/TopGamingPodcasts';
 import TopCryptoPodcasts from './pages/TopCryptoPodcasts';
 import TopTechPodcasts from './pages/TopTechPodcasts';
+import DatingAppsPage from './pages/DatingAppsPage';
+import TopGamesPage from './pages/TopGamesPage';
 
 function App() {
   return (
@@ -48,6 +50,7 @@ function App() {
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/dating-apps" element={<DatingAppsPage />} />
             <Route path="/category/:categoryId" element={<CategoryPage />} />
             <Route path="/subscription" element={<Subscription />} />
             <Route path="/blog/:blogId" element={<BlogPage />} />
@@ -60,6 +63,9 @@ function App() {
             <Route path="/podcasts/gaming" element={<TopGamingPodcasts />} />
             <Route path="/podcasts/crypto" element={<TopCryptoPodcasts />} />
             <Route path="/podcasts/tech" element={<TopTechPodcasts />} />
+            <Route path="/top-games" element={<TopGamesPage />} />
+            <Route path="/news" element={<NotFoundPage />} />
+            <Route path="/dating" element={<NotFoundPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Layout>

@@ -25,6 +25,9 @@ export default function NavLinks() {
         <Link to="/" className={linkClass('/')}>
           Home
         </Link>
+        <Link to="/dating-apps" className={linkClass('/dating-apps')}>
+          Dating Apps
+        </Link>
         <CategoryDropdown />
         <BlogDropdown />
         <PodcastDropdown />

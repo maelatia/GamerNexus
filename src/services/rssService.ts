@@ -141,7 +141,8 @@ export const GAMING_NEWS_FEEDS = {
   'gamespot': 'https://www.gamespot.com/feeds/game-news',
   'polygon': 'https://www.polygon.com/rss/index.xml',
   'steam': 'https://store.steampowered.com/news/collection/steam/feed',
-  'pcgamer': 'https://www.pcgamer.com/rss/'
+  'pcgamer': 'https://www.pcgamer.com/rss/',
+  'steampowered': 'https://store.steampowered.com/feeds/news.xml'
 };
 
 export const ESPORTS_FEEDS = {
