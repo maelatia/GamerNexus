@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'Nexa';
-  src: url('/font/Nexa-Trial-Regular.ttf') format('truetype');
+  src: url('/font/Nexa.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Riosark';
-  src: url('/font/Riosark.otf') format('opentype');
+  src: url('/font/riosark.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -22,7 +22,47 @@
     font-family: 'Nexa', sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6, .nav-title {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Riosark', sans-serif;
+  }
+
+  p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+    max-width: 100%;
+  }
+
+  .article-content {
+    @apply w-full;
+  }
+
+  .article-content h1,
+  .article-content h2,
+  .article-content h3 {
+    @apply w-full break-words;
+  }
+
+  .article-content p {
+    @apply w-full break-words whitespace-normal;
+  }
+
+  .article-content ul {
+    @apply w-full;
+  }
+
+  .article-content li {
+    @apply break-words whitespace-normal;
+  }
+}
+
+@layer utilities {
+  .font-nexa {
+    font-family: 'Nexa', sans-serif;
+  }
+  
+  .font-riosark {
     font-family: 'Riosark', sans-serif;
   }
 }
